@@ -12,7 +12,7 @@ export default function Navbar() {
 
   const menus = [
     { title: "Home", path: "/" },
-    { title: "Simulador", path: "/simulador" },
+    { title: "Simulador", path: "/simulator" },
   ];
 
   return (
