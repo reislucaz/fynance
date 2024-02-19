@@ -12,6 +12,7 @@ export default function Navbar() {
 
   const menus = [
     { title: "Home", path: "/" },
+    { title: "Notícias", path: "/news" },
     { title: "Simulador", path: "/simulator" },
   ];
 
