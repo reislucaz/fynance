@@ -1,6 +1,7 @@
 import "./globals.css";
 import Head from "next/head";
 import Layout from "@/components/layout/layout";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata = {
   title: "Fynance",
@@ -21,6 +22,7 @@ export default function RootLayout({
           <meta title="Fynance" />
         </Head>
         <Layout>{children}</Layout>
+        <Toaster />
       </body>
     </html>
   );

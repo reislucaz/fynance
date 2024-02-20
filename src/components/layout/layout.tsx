@@ -2,12 +2,14 @@
 
 import { ThemeProvider } from "next-themes";
 import Navbar from "../nav-bar";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
+  const queryClient = new QueryClient();
   return (
     <ThemeProvider
       attribute="class"
@@ -16,7 +18,7 @@ export default function Layout({ children }: LayoutProps) {
       disableTransitionOnChange
     >
       <Navbar />
-      {children}
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     </ThemeProvider>
   );
 }
